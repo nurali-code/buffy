@@ -1,0 +1,103 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #00aedc
+$second: #000
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    color: $second
+    font-size: 14px
+    background-color: #000
+    font-family: 'Bebas', sans-serif
+    display: flex
+    flex-direction: column
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+img
+    max-width: 100%
+
+a,
+button
+    text-align: left
+    color: white
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        color: $prime
+
+hr
+    height: 80px
+    width: 1px
+    background: rgb(255,255,255)
+    background: linear-gradient(351deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)
+
+    @media screen and ( max-width: 800px )
+        height: 60px
+
+.btn
+    display: inline-block
+    font-size: 18px
+    font-style: normal
+    font-weight: 500
+    line-height: 150%
+    letter-spacing: 0.16px
+    padding: 12px 22px
+    text-align: center
+    border-radius: 30px
+    background-color: rgba($prime, 1)
+    backdrop-filter: blur(10px)
+    color: black
+    margin-bottom: 40px
+    box-shadow: 5px 5px 0 0 #000
+    &:hover,
+    &:active
+        opacity: 1
+        color: rgba(0, 0, 0, .6)
+        box-shadow: 0 0 0 0 #000
+
+    img
+        width: 23px
+        display: inline-block
+        vertical-align: middle
+        margin-left: 20px
+        position: relative
+        left: -2px
+
+    i
+        font-style: normal
+
+@media screen and ( max-width: 1500px )
+    .btn
+        margin-bottom: 30px
+        img
+            width: 22px
+
+@media screen and ( max-width: 700px )
+    .btn
+        font-size: 16px
+        i
+            display: none
+
+        img
+            left: -6px
+
+@media screen and ( min-width: 1100px ) and ( max-width: 1400px ) and ( max-height: 630px )
+    .btn
+        margin-bottom: 2px
